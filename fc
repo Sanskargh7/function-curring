@@ -1,0 +1,11 @@
+ let multyply=function(x,y){
+     console.log(x*y);
+ }
+let multyply=function(x){
+    return function(y){
+        console.log(x*y);
+    }
+}
+//let multiplyBytwo=multyply(2);
+ let multiplyBytwo=multyply.bind(this,2,4);
+multiplyBytwo(5);
